@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsnd --respawn --transpile-only index.ts",
-    "start": "tsnd --respawn --transpile-only index.ts"
+    "start": "tsnd --respawn --transpile-only index.ts",
   },
   "license": "MIT",
   "dependencies": {
