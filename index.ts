@@ -4,7 +4,6 @@ import path from "path";
 import "reflect-metadata";
 import { buildSchema } from "type-graphql";
 import { UserResolver } from "./src/resolvers/UserResolver";
-import 'dotenv/config'
 
 async function main() {
   const schema = await buildSchema({
@@ -16,7 +15,7 @@ async function main() {
     schema,
   });
 
-  const { url } = await server.listen();
+  const { url } = await server.listen(process.env.PORT, "0.0.0.0");
 
   console.log(`Server running on ${url}`);
 }
